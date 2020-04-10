@@ -1,17 +1,17 @@
 console.log("HI")
 let cols = 30, rows = 30, height = 300, width = 300;
-let x_min = -10, x_max= 10, y_min= -10, y_max= 10;
+let x_min = -1, x_max= 1, y_min= -1, y_max= 1;
 let x_width = x_max - y_min;
 let y_height = y_max - y_min;
 let pathLenght = 200;
 var paths = [];
 
 function xToInterval(x){
-    return (x - x_min)*(width/x_width);
+    return (Math.sin(x) - x_min)*(width/x_width);
 }
 
 function yToInterval(y){
-    return (y - y_min)*(height/y_height);
+    return (Math.sin(y) - y_min)*(height/y_height);
 }
 
 function setup() {
