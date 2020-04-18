@@ -8,13 +8,13 @@ Using a [Lindenmayer system](https://en.wikipedia.org/wiki/L-system) to draw a f
 
 ## Visualization of the slope fields of differential equations
 
-
+<div>
 <img src="https://github.com/daanklijn/generative-art/raw/master/results/differential.gif" width="300px">
 <img src="https://github.com/daanklijn/generative-art/raw/master/results/differential2.gif" width="300px">
-<img src="https://github.com/daanklijn/generative-art/raw/master/results/differential3.gif" width="300px">
 <img src="https://github.com/daanklijn/generative-art/raw/master/results/differential4.gif" width="300px">
-<img src="https://github.com/daanklijn/generative-art/raw/master/results/differential5.gif" width="300px">
-<img src="https://github.com/daanklijn/generative-art/raw/master/results/differential6.gif" width="300px">
+</div>
+
+[More differentials here](https://github.com/daanklijn/generative-art/tree/master/results)
 
 <!---
 Things to try:
