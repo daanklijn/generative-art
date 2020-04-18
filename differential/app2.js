@@ -1,13 +1,12 @@
-console.log("HI")
 let cols = 30, rows = 30, height = 200, width = 200;
-let scale = 50;
+let scale = 10;
 let x_min = -scale, x_max= scale, y_min= -scale, y_max= scale;
 let x_width = x_max - y_min;
 let y_height = y_max - y_min;
 var paths = [];
-pathLength = 100;
-stepSize = 0.02;
-gridSize = 20;
+pathLength = 400;
+stepSize = 0.04;
+gridSize = 40;
 var t = 0;
 
 var lines = [];
@@ -19,7 +18,10 @@ function setup() {
             lines.push(lin);
         }
     }
-    createCanvas(height, width);
+    var canv=createCanvas(height, width);
+    // canv.hide();
+    frameRate(22);
+    createLoop({duration:3,gif:true});
 }
 
 function xToGrid(x){
@@ -31,11 +33,33 @@ function yToGrid(y){
 }
 
 function dy(x, y) {
-    return -x + y*(x^2 + y^2)*Math.sin(Math.PI/(x^2 + y^2)^0.5)^2
+    // Differential 2
+    // return 4*Math.atan2(5*Math.sin(x),y)
+
+    // Differential 4
+    // return 2*Math.sin(x)*Math.cos(y)
+
+    // Differential 5
+    // return 10*Math.sin(x)
+
+    // Differential 6
+    // return Math.sqrt(x) + y*(x^2 + y^2)*Math.sin(Math.PI/(x^2 + y^2)^0.5)^2
+    return x + y*(x^2 + y^2)*Math.sin(Math.PI/(x^2 + y^2)^0.5)
 }
 
 function dx(x, y) {
-    return -y + x*(x^2 + y^2)*Math.sin(Math.PI/(x^2 + y^2)^0.5)^2
+    // Differential 2
+    // return 4*Math.atan2(5*Math.sin(y),x)
+
+    // Differential 4
+    // return 2*Math.sin(y)*Math.cos(x)
+
+    // Differential 5
+    // return 10*Math.sin(y^2)
+
+    // Differential 6
+    // return Math.sqrt(y) + x*(x^2 + y^2)*Math.sin(Math.PI/(x^2 + y^2)^0.5)^2
+    return -y + x*(x^2 + y^2)*Math.sin(Math.PI/(x^2 + y^2)^0.5)
 }
 
 function draw() {
