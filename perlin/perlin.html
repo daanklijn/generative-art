@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/p5.createloop@latest/dist/p5.createloop.js"></script>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let t=0;
+
+    function setup() {
+        createCanvas(500, 500);
+        pixelDensity(1)
+        console.log(pixelDensity())
+    }
+    function draw(){
+        loadPixels();
+        let xoff=0;
+        for (let x = 0; x < width; x++) {
+            for (let y = 0; y < height; y++) {
+                r = noise(x*0.05,y*0.05,t*0.1)*255;
+                // loop over
+                index = 4*(x + (y*width));
+                pixels[index] =r;
+                pixels[index+1] = r;
+                pixels[index+2] = r;
+                pixels[index+3] = 255;
+            }
+            xoff++;
+        }
+        t++;
+        updatePixels();
+    }
+</script>

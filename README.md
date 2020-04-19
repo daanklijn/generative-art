@@ -16,6 +16,9 @@ Using a [Lindenmayer system](https://en.wikipedia.org/wiki/L-system) to draw a f
 
 [More differentials here](https://github.com/daanklijn/generative-art/tree/master/results)
 
+## Field of vectors that are directed by [Perlin Noise](https://en.wikipedia.org/wiki/Perlin_noise)
+
+<img src="https://github.com/daanklijn/generative-art/raw/master/results/perlin_field.gif" width="300px">
 <!---
 Things to try:
 - Differential Equations Direction Fields
